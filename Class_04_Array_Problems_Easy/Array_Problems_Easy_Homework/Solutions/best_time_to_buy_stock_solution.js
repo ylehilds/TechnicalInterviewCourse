@@ -11,6 +11,7 @@ let input_array = [7, 1, 5, 3, 6, 4]
 // let input_array = [3,2,6,5,0,3]
 
 let maxProfitBruteForce = function(input_array) {
+  // because we are iterating all combinations going forward then we are only interested in keeping track of maximumProfit
   let profit = 0
   let maximumProfit = 0
   for (let i=0; i < input_array.length; i++) {
@@ -24,6 +25,7 @@ let maxProfitBruteForce = function(input_array) {
 }
 
 let maxProfitOptimized = function(input_array) {
+  // because we are iterating only once, then it important to find the minPrice and keep track of it while also finding maxProfit using the minPrice on each iteration
   let minPrice = 0
   let maxProfit = 0
   for (let i=0; i < input_array.length; i++) {
