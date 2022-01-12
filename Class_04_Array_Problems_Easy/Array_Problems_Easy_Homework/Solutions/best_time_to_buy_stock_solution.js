@@ -3,12 +3,12 @@
 // sell one share of the stock) design an algorithm to find the maximum profit
 // This problem came from leetcode.com
 
-// let input_array = [7, 1, 5, 3, 6, 4]
+let input_array = [7, 1, 5, 3, 6, 4]
+// Output = 5
 // let input_array = [7,1,5,3,6,4]
 // let input_array = [2,4,1]
 // let input_array = [1, 2]
-let input_array = [3,2,6,5,0,3]
-// Output = 5
+// let input_array = [3,2,6,5,0,3]
 
 let maxProfitBruteForce = function(input_array) {
   let profit = 0
