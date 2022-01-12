@@ -25,7 +25,7 @@ let maxProfitBruteForce = function(input_array) {
 }
 
 let maxProfitOptimized = function(input_array) {
-  // because we are iterating only once, then it important to find the minPrice and keep track of it while also finding maxProfit using the minPrice on each iteration
+  // because we are iterating only once, then it is important to find the minPrice and keep track of it while also finding maxProfit using the minPrice on each iteration
   let minPrice = 0
   let maxProfit = 0
   for (let i=0; i < input_array.length; i++) {
