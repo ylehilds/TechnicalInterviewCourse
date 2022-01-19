@@ -2,7 +2,7 @@
 # one number) which has the largest sum and return its sum.
 # This problem came from leetcode.com
 
-input_array = [-2, 1, -3, 4, -1, 2, 1, -5, 4, 10]
+input_array = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 # Output 6
 
 def maximum_subarray(nums):
