@@ -115,28 +115,56 @@
             - O(log(n)) or O(1)
 
 5. What is and what are the benefits of using a dictionary?
-    - 
+    - A dictionary is a data structure used for storing a group of objects. A dictionary is a set of keys and their associated values. A dictionary is also called a hash, a map, or a hashmap depending on the language. Dictionaries are often extremely efficient in regards to accessing, searching, inserting, and deleting. They also are formatted in a readable way with key-value pairs.
+        - Access: O(1)
+        - Search: O(1)
+        - Insertion: O(1)
+        - Deletion O(1)
+
 6. What is and what are the benefits of using a linked list?
-    - 
-7. What is and what are the benefits of using a doubley linked list?
-    - 
+    - A linked list is a data structure that contains elements that are not stored at contiguous memory locations. The elements in a linked list are linked using pointers. A linked list consists of nodes. Each node contains a data value and a reference to the next node in the list. A linked list is a dynamic data structure that can shrink and grow at runtime. Linked lists efficiently use memory. They are also good for implementing a stack or a queue. Insertion and deletion are also extremely fast. However, linked lists use more memory than an array because you must store a pointer. They also take longer than an 
+        - Access: O(N)
+        - Search: O(N)
+        - Insertion: O(1)
+        - Deletion O(1)
+
+7. What is and what are the benefits of using a doubly linked list?
+    - A doubly linked list is a linked list that not only has a pointer to the next node, but also a pointer to the previous node. Doubly linked lists make reversing the linked list much easier. The traversal of the linked list is also bidirectional. However, it uses more memory than an array or a normal linked list.
+        - Access: O(N)
+        - Search: O(N)
+        - Insertion: O(1)
+        - Deletion O(1)
+
 8. What is and what are the benefits of using an array?
-    - 
+    - An array is a data structure that consists of a collection of elements, which are identified by an index. Arrays are easier to declare and use, can be used with most data types, and are useful for representing metrixs. However, depending on the language, an array may waste memory if all array elements are not used. Some arrays also can't accomodate new values. Arrays also are difficult to search because the entire array must be iterated through.
+        - Access: O(1)
+        - Search: O(N)
+        - Insertion: O(N)
+        - Deletion O(N)
+
 9. What is the difference between a breadth-first search and a depth-first search?
-    - 
+    - Breadth First Search is a vertex based technique for finding a shortest path in graph. It uses a Queue data structure which follows first in first out. One vertex is selected at a time when it is visited and marked then its adjacent vertexs are visited and stored in the queue. It is slower than Depth First Search. In short, Breadth First Search goes level by level in a tree.
+    - Depth First Search is a edge based technique. It uses the Stack data structure, performs two stages, first visited vertices are pushed into stack and second if there is no vertices then visited vertices are popped. In short, Depth First Search goes down the left side completely than back up to follow the same proceduce one path to its left until completed. 
+
 10. How does a merge sort work? What is its time complexity?
-    - 
+    - Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves. The merge() function is used for merging two halves.
+        - Time Complexity: O(NlogN)
+
 11. How does a quick sort work? What is its time complexity?
-    - 
-12. Define “stack” and “heap.” What is a stack overflow?
-    - 
+    - QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. Target of partitions is, given an array and an element x of array as pivot, put x at its correct position in sorted array and put all smaller elements (smaller than x) before x, and put all greater elements (greater than x) after x. All this should be done in linear time.
+        - Time Complexity: O(NlogN)
+
+12. What is a stack overflow?
+    - A stack overflow occurs when a computer or processor memory also called a stack is filled more than its capacity. 
+
 13. How does an array differ from a stack?
-    - 
+    - Stacks are based on the LIFO principle whereas array is based on indexes. Stacks can insert at only at the top of the stack whereas arrays can be inserted at any index. Stacks are dynamic and arrays usually have a fixed size. A stack can only do linear search, but arrays can do linear and binary search. 
+
 14. What is the difference between FIFO and LIFO?
     - FIFO stands for first in first out. A queue is an example of the FIFO principle. Elements are placed in a queue and the first element place in the queue is the next to be removed. LIFO stands for last in first out. A stack is an example of the LIFO principle. Elements are placed on the stack and the most recently placed element is the element next removed from a stack.
 
 15. What is and what are the benefits of using an queue?
-    - 
+    - A queue is based on the FIFO so the element inserted at the first of the queue, is the first element to come off the queue. Queues are more flexible than an array. However, a queue can remove only elements from the beginning of the queue. 
 
 **Framework Questions**
 
@@ -191,26 +219,29 @@
         - Dependency Inversion Principle: This principle offers a way to decouple software modules. Developers should depend on abstractions (use of intefaces), not on concretions (direct use of classes).
 
 8. What is Agile development?
-    - 
+    - The agile development refers to a software development methodolgy, which focuses on iteration. Requirements and solutions are developed with each iteration of the project. The agile approach delivers value faster and the projects that utilize this methodology have a greater ability to respond to change.
 
 **Language Questions**
 
 1. How is Python interpreted?
-    - 
+    - Python is an interpreted language, which means the source code of a Python program is converted into bytecode that is then executed by the Python virtual machine.
+    
 2. How is C interpreted?
-    - 
+    - C is a compiled language, which means they are converted directly into machine code that the processor can execute.
+ 
 3. How is Java interpreted?
-    - 
+    - Java does both compilation and interpretation, In Java, programs are not compiled into executable files. They are compiled into bytecode, which the JVM (Java Virtual Machine) then interprets and executes at runtime.
+
 5. What is strong-typing and weak-typing? Which is preferred? Why?
-    - 
+    - Strongly typed languages do type checking such as C and Java. Weakly typed languages do not do type checking such as Javascript. Typed languages are often preferred because they protect against bugs and errors in a system.
 
 **Miscellaneous Questions**
 
 1. What is regex?
-    - Regex stands for regular expression. Regex is a sequence of characters that specifies a search pattern in text. The expression is used to match, locate, and adjust text. The following is a regex example that can be used to match a phone number: "^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$". 
+    - Regex stands for regular expression. Regex is a sequence of characters that specifies a search pattern in text. The expression is used to match, locate, and adjust text. The following is a regex example that can be used to match a phone number: ^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$. 
 
-2. What is the difference between git fetch and rebase and git pull?
-    - 
+2. What is the difference between git fetch and git rebase, and git pull?
+    - git fetch is a command that tells your local git to grab the latest meta-data info from the original. It does not do a file transfer, but checks for changes. git rebase changes the base of one's branch from one commit to another making it appear as if one had created your branch from a different commit. git pull copies changes from the remote repository.
 
 **Object Oriented Programming Questions**
 
@@ -228,7 +259,7 @@
     - Polymorphism refers to the concept that one can access objects of different types through the same interface. Each type can provide its own independent implementation of this interface. For example, one class name can be used to reference multiple kinds of subtypes at the same time. A developer could create the object class Animal and define multiple subtypes such as cow, dog, cat, and bear. They all have the property color and the method eat(). 
 
 5. What do you think makes object-oriented design the preferred approach?
-    - 
+    - There are several reasons that object-oriented design is desired. First, one can reuse code through inheritance. Also, the modularity of object-oriented design leads to easier testing. The design also simplifies the whole appliation by breaking it into manageable pieces.
 
 **Opinion Questions**
 1. What is difficult about writing code?
@@ -244,7 +275,7 @@
     - The most challenging project I have encountered was figuring out how to reduce the time a deployment pipeline was taking to execute. I had to monitor and analyze the pipeline to find major bottle necks. Then, I had to research possible solutions to reduce the time. I ended up parallelizing both the linting and testing processes. I also added improvements to Jenkins to parallelize builds. The project was challenging because I needed to understand a major code base and some complicated code to correctly improve the deployment process. However, I was able to gain help from co-workers to overcome this challenge. There were also a lot of possible solutions, but I was able to overcome that challenge by thorough research and addtional communication with co-workers.
 
 5. Why would you use microservice architecture?
-    - 
+    - Microservices allow for continuous delivery. Each service is isolated, which makes it significantly easier to upate and improve individual services. Likewise, microservices help maximize deployment velocity. In addition, each service is in its own container, which gives developers the ability to dynamically change each service. Each service can be written in the language that is ideal for it. Microservices are also easier to maintain compared to a monolithic application. Monolithic projects can also be expensive to maintain and microservices can be much cheaper.
 
 6. What’s important when checking a team member’s code?
     - First of all, one should check their team member's code to ensure quality and reduce bugs, errors, and code smells. When checking a team member's code one should first make sure the logic is correct. They should ask their team member what the goal of the code is to ensure the logic is sound. Additionally, the reviewer should go through each line of code and look at the codes dependencies.  
@@ -427,4 +458,15 @@ The following websites were used to gather questions as well as answer the provi
 - https://www.interserver.net/tips/kb/mvc-advantages-disadvantages-mvc
 - https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design
 - https://www.bmc.com/blogs/cap-theorem
-
+- https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_1/Fundamentals_of_data_structures/Dictionaries
+- https://www.geeksforgeeks.org/advantages-and-disadvantages-of-linked-list
+- https://www.geeksforgeeks.org/advantages-disadvantages-and-uses-of-doubly-linked-list
+- https://dare2compete.com/blog/advantages-and-disadvantages-of-arrays
+- https://www.geeksforgeeks.org/merge-sort
+- https://www.geeksforgeeks.org/quick-sort
+- https://www.geeksforgeeks.org/difference-between-stack-and-array
+- https://www.quora.com/What-are-the-advantages-and-disadvantages-of-a-queue-and-a-circular-queue
+- https://www.cprime.com/resources/what-is-agile-what-is-scrum
+- https://stackoverflow.com/questions/1326071/is-java-a-compiled-or-an-interpreted-programming-language
+- https://www.roberthalf.com/blog/salaries-and-skills/4-advantages-of-object-oriented-programming
+- https://shadow-soft.com/why-microservice-architecture
