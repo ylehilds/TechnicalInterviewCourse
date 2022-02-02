@@ -285,74 +285,73 @@
 1. What is a class?
     - A class is an object oriented structure that holds data and methods to alter that data.
 
-2. What is a clousure?
-    - 
+2. What is a closure?
+    - A closure is a function that can be stored as a variable also known as a referred to as a "first-class function. A closure has special ability to access other variables local to the scope it was created in.
 
 3. What do classes and closures have in common?
-    - 
+    - Classes let you define fields and methods whereas closures store information about local variables from a function call. Closures is often more related to functional programming and classes are more related to object oriented programming.
 
 4. What is an interface?
-    - 
+    - An interface is a structure or design that allows a program to enforce rules onto a class. An interface is a roadmap for a class that it must follow. For instance, a car must could implement a vehicle and the vehicle interface could state that the car must have certain attributes such as four wheels.
 
-5. What is a tirnary function?
-    - 
+5. What is a ternary operator?
+    - A ternary operator or ternary function is a short cut if else statement in lanugages such as Javascript, Python, Swift, ect. This operator allows for convient conditional statements in varying situations.
 
 6. What is the difference between a function and a method?
-    - 
+    - Function is a set of instructions that perform a task where as a method is a set of instructions that are associated with an object.
 
 7. What is an anynomous function? Why are they useful?
-    - 
+    - An anonymous function is a one-line function with no attached name or identifier. The advantage of an anonymous function is that it does not have to be stored in a separate file. Anonymous functions reduces the number of code files necessary for an application.
 
 8. What is a callback function?
-    - 
+    - A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
 
 9. What is functional programming?
-    - 
+    - Functional programming is a programming strategy that focuses on using function to run a program. It is a declarative programming structure where function definitions map values to other values. Functional programming does not focus on updating the running state of the program.
 
 10. What is a generic?
-    - 
+    - Generics mean parameterized types. The idea is to allow type (Integer, String, … etc, and user-defined types) to be a parameter to methods, classes, and interfaces. Using Generics, it is possible to create classes that work with different data types. An entity such as class, interface, or method that operates on a parameterized type is called a generic entity. For example, you create a linkedlist of integers, but instead of repeating the code for a linkedlist of strings you can use a generic to create a linkedlist that passes in a type upon creating the linkedlist.
 
 11. What is an abstract class?
-    - 
-
+    - In Java, an abstract class is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class). For example, an animal abstract class cannot be used to create an animal object, but a dog class could implement an animal class and that dog class could be used to make dog objects.
 
 **Software Design Questions**
 
-1. What is and when would you apply asynchronous communication between two systems?
-    - 
+1. What is asynchronous programming?
+    - Asynchronous programming is a form of parallel programming that allows a unit of work to run separately from the primary application thread. For example, you could have a main function running code that calls another function inside of it. Instead of pausing to have the inner function finish the outer function will continue running at the same time as the inner function.
 
 2. What does the term seperation of concerns mean?
-    - 
+    - Seperation of concerns is a design principle that seperates components of a program into sections. This makes an application more readable and easier to maintain. 
 
 3. What is the difference between Request/Reply and Publish/Subscribe models?
-    - 
+    - In the request-response model, a client requests data or services, and a server responds to the request by providing the data. Whereas in a publish-subscribe model a central source called a broker (also sometimes called a server) receives and distributes all data. Pub-sub clients can publish data to the broker or subscribe to get data from it—or both.
 
-4. When should one scale up vs scale out?
-    - 
+4. What does it mean to scale up vs scale down?
+    - Scaling up or vertical scaling means adding more compute power to a specific server or instance. Scaling down or horizontal scaling means adding more servers or instances to your infrastructure. 
 
 5. Why would you choose a microservice approach vs a monolithic app?
-    - 
+    - A microservice approach has independent components, which makes maintenence an individual components much easier. Also, microservices are easier to understand for developers working on them. In addition, each component in a microservice structure application can be scaled independently. 
 
 6. Explain the differences between a Thread and a Process?
-    - 
+    - A process is a program which is dispatched from the ready state and are scheduled in the CPU for execution. A thread is the segment of a process. This means a process can have multiple threads and these multiple threads are contained within a process. A thread has three states: Running, Ready, and Blocked. 
 
-7. What is the meaning of “high cohesion” and “loose coupling”?
-    - 
+7. What is the meaning of high cohesion?
+    - Cohesion is the degree to which the elements inside a module belong together. A module is said to have high cohesion if it contains related elements. Modules with a single, well-defined purpose are easy to understand and much more readable.
 
 8. What is a reverse proxy?
-    - 
+    - A reverse proxy server is a type of proxy server that typically sits behind the firewall in a private network and directs client requests to the appropriate backend server. A reverse proxy provides an additional level of abstraction and control to ensure the smooth flow of network traffic between clients and servers.
 
-9. What is a thread?
-    - 
+9. What is the meaning of loose coupling?
+    - Coupling is the degree of interdependence between software modules. Two modules have low coupling or loose coupling if they are loosley connected. Loosely coupled modules are easier to develop and maintain. Since they are independent of each other, we can develop and test them in parallel. 
 
 10. What is lazy loading? Give an example of using this principle.
-    - 
+    - Lazy loading (also called on-demand loading) is an optimization technique for the online content, be it a website or a web app. Instead of loading the entire web page and rendering it to the user in one go as in bulk loading, the concept of lazy loading assists in loading only the required section and delays the remaining, until it is needed by the user. For example, images at the top of a page are loaded first and only if a user scrolls down are other images loaded.
 
 11. What is tight coupling?
-    - 
+    - Coupling is the degree of interdependence between software modules. Two modules have high coupling or tight coupling if they are tightly connected.
 
 12. When should one use memoization?
-    - 
+    - Memoization is a programming technique that accelerates performance by caching the return values of expensive function calls. For example, you may have a function that you need to call frequently with certain input values, you can cache the output to accelerate the responses.
 
 13. What is caching?
     - A cache is a data storage layer which stores a subset of data, so that future requests for that data can be accessed faster than through the data’s primary storage location.
@@ -362,19 +361,19 @@
 1. What is a singleton? Give an example of when to use this principle
     - A singleton is a design pattern, which restricts the instantiation of a class to a single instance. This provides coordinated access to that one resource. Use cases for this pattern include factories, builders, and objects that hold program state. For example, a singleton can be used for a single database object shared by different parts a program. Another common example of using a singleton is a logger object that needs to be share among all parts of a program.
 
-2. What is a factory? Give an example of when to use this principle
+2. What is a factory? Give an example of when to use this principle.
     - 
 
-3. What is an adapter design pattern?
+3. What is an adapter design pattern? Give an example of when to use this principle.
     - 
 
-4. What is a builder design pattern?
+4. What is a builder design pattern? Give an example of when to use this principle.
     - 
 
-5. What is an observer design pattern?
+5. What is an observer design pattern? Give an example of when to use this principle.
     - 
 
-6. What is a strategy design pattern?
+6. What is a strategy design pattern? Give an example of when to use this principle.
     - 
 
 **Test Questions**
@@ -470,3 +469,17 @@ The following websites were used to gather questions as well as answer the provi
 - https://stackoverflow.com/questions/1326071/is-java-a-compiled-or-an-interpreted-programming-language
 - https://www.roberthalf.com/blog/salaries-and-skills/4-advantages-of-object-oriented-programming
 - https://shadow-soft.com/why-microservice-architecture
+- https://stackoverflow.com/questions/3368713/whats-the-difference-between-closures-and-traditional-classes
+- https://www.cs.utah.edu/~germain/PPS/Topics/interfaces.html
+- https://www.codecademy.com/article/fwd-js-methods-functions
+- https://www.sciencedirect.com/topics/computer-science/anonymous-function
+- https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
+- https://en.wikipedia.org/wiki/Functional_programming
+- https://www.geeksforgeeks.org/generics-in-java
+- https://www.w3schools.com/java/java_abstract.asp
+- https://stackify.com/when-to-use-asynchronous-programming
+- https://blog.opto22.com/optoblog/request-response-vs-pub-sub-part-1
+- https://opsani.com/blog/scale-up-vs-scale-out-whats-the-difference
+- https://www.geeksforgeeks.org/difference-between-process-and-thread
+- https://www.nginx.com/resources/glossary/reverse-proxy-server
+- https://www.geeksforgeeks.org/what-is-lazy-loading
