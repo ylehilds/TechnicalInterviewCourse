@@ -17,17 +17,12 @@ function findDuplicateBruteForce (input_array) {
 }
 
 function findDuplicateOptimized (input_array) {
-let duplicate = false
-let dictionary = {}
+let numsHelper = []
 for (let int of input_array) {
-  if (!dictionary.hasOwnProperty(int)) dictionary[int] = 'unique'
-  else {
-    dictionary[int] = 'duplicate'
-    duplicate = true
-  }
+  if (numsHelper.includes(int)) return true
+  numsHelper.push(int)
 }
-  console.log(`optimized dictionary content: ${JSON.stringify(dictionary)}`)
-  return duplicate
+  return false
 }
 
 console.log(`brute force method call: ${findDuplicateBruteForce(input_array)}`)
