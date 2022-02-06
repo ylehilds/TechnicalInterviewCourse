@@ -32,5 +32,4 @@ function getDictionary(nums) {
   return dictHelper
 }
 
-console.log(removeDuplicates(test_dict))
-// not finished in class
+console.log('Uncommon elements records :', removeDuplicates(test_dict))
