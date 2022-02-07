@@ -26,9 +26,9 @@ function printList() {
 
 // method to create a simple linked list with 3 nodes
 // Start with the empty list.
-head = new Node('Hello')
-let second = new Node('World')
-let third = new Node('!')
+head = new Node('Linked List')
+let second = new Node('Hello')
+let third = new Node('World!')
 
 head.next = second // Link first node with the second node
 second.next = third // Link second node with the third node
