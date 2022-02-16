@@ -63,8 +63,8 @@ class BST {
         // Base Cases: root is null
         // or key is present at root
         if (root == null || root.key == key) return root // if there is no root or we have found the key then we are done
-        if (root.key < key) return this.search(root.right, key) // if key is less than root key then search right
-        return this.search(root.left, key) // if key is less than root key then search left
+        if (root.key < key) return this.search(root.right, key) // if root key is less than key then search right
+        return this.search(root.left, key) // search left
     }
 }
 
