@@ -51,7 +51,7 @@ class BST {
 // do inorder traversal of BST
 
     inorderRec(root) {
-        if (root != null) {
+        if (root) {
             this.inorderRec(root.left)
             console.log(root.key)
             this.inorderRec(root.right)
