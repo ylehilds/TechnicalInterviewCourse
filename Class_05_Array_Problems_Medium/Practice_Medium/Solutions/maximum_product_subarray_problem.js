@@ -5,7 +5,6 @@
 inputArray = [2, 3, -2, 4, 8, 2, -1, -2]
 // # output: 6
 
-// This problem is not finished and is erroneous because line 15 is not the right condition for this problem
 var maxProduct = function(inputArray) {
   let allContiguousArrays = []
   for (let i = 0; i < inputArray.length; i++) {
