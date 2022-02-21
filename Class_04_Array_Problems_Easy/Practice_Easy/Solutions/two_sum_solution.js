@@ -3,7 +3,7 @@
 // # This problem came from leetcode.com
 
 input_array = [2, 5, 6, 3, 9] 
-input_target = 10
+input_target = 11
 // # Output = [2, 3]
 
 function twoSum(array, target) {
