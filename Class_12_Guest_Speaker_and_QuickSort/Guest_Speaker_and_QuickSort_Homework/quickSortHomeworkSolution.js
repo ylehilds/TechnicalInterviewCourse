@@ -13,7 +13,7 @@
 // - https://www.youtube.com/watch?v=kFeXwkgnQ9U
 // - Here is an additional resource to look at about quicksort:
 //   - https://www.geeksforgeeks.org/python-program-for-quicksort
-// - Write a qui
+// - Write a quicksort line by line and then paste your code into the quiz.
 
 let inputArray = [4,8,6,5,200,99,23,56,89,1,0,2,10,50,60,44,7]
 function quickSort(array) {
