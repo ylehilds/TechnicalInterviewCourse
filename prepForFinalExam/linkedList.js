@@ -17,6 +17,34 @@
 //
 //   Copy and paste your code here for both functions. They don't need to be perfect, just try your best!
 
+// class declaration
+class Node {
+  constructor(data) {
+    this.data = data
+    this.next = null
+  }
+}
+
+// function to initialize linkedNodeList from an array
+function initializeLinkedNodeList(array) {
+  let node = new Node(array.shift())
+  if (array.length) {
+    node.next = initializeLinkedNodeList(array)
+  }
+  return node
+}
+let head = initializeLinkedNodeList([1,2,3,4,5,6,7,8,9,10])
+// console.log(head)
+
+//print linkedList
+function print(linkedList) {
+  while(linkedList) {
+    console.log(linkedList)
+    linkedList = linkedList.next
+  }
+}
+console.log(print(head))
+
 // reverse a linked list
 
 
