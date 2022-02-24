@@ -36,26 +36,99 @@ function initializeLinkedNodeList(array) {
 let head = initializeLinkedNodeList([1,2,3,4,5,6,7,8,9,10])
 // console.log(head)
 
-//print linkedList
-function print(linkedList) {
-  while(linkedList) {
-    console.log(linkedList)
-    linkedList = linkedList.next
+//print node linkedList
+function print(node) {
+  while(node) {
+    console.log(node)
+    node = node.next
   }
 }
-console.log(print(head))
+// console.log(print(head))
+
+function searchLinkedList(node, target) {
+  while (node) {
+    if (node.data === target) return node
+    node = node.next
+  }
+  return false
+}
+
+// console.log(searchLinkedList(head, 1))
 
 // reverse a linked list
+function reverse (node) {
 
+}
 
 
 
 
 // -------------------------------------------------------------------------------------------------------------------------------
 // delete a linked list element
+function deleteNode (node, target) {
+  let lastNode
+  while(node.data !== target) {
+    lastNode = node
+    node = node.next
+  }
+  if (lastNode) lastNode.next = node.next
+  else { // dealing with cases right at the head.
+      node.data = node.next.data
+      node.next = node.next.next
+  }
+  console.log(print(head))
+}
+// console.log(deleteNode(head, 5))
 
+function addLinkedListNodes(node) {
+  let node1 = searchLinkedList(node, 1)
+  let node2 = searchLinkedList(node, 10)
+  return node1.data + node2.data
+}
 
+function addAllLinkedListNodes(node) {
+  let totalCount = 0
+  while (node) {
+    totalCount += node.data
+    node = node.next
+  }
+  return totalCount
+}
 
+function multiplyAllLinkedListNodes(node) {
+  let totalCount = 1
+  while (node) {
+    totalCount *= node.data
+    node = node.next
+  }
+  return totalCount
+}
 
+function addOddLinkedListNodes(node) {
+  let nodeCount = 1
+  let totalCount = 0
+  while (node) {
+    if (nodeCount % 2 !== 0) totalCount += node.data
+    node = node.next
+    nodeCount++
+  }
+  return totalCount
+}
+
+function addEvenLinkedListNodes(node) {
+  let nodeCount = 1
+  let totalCount = 0
+  while (node) {
+    if (nodeCount % 2 === 0) totalCount += node.data
+    node = node.next
+    nodeCount++
+  }
+  return totalCount
+}
+
+// console.log(addLinkedListNodes(head))
+// console.log(multiplyAllLinkedListNodes(head))
+console.log(`Odd sum = ${addOddLinkedListNodes(head)}`)
+console.log(`Even sum = ${addEvenLinkedListNodes(head)}`)
 
 // -------------------------------------------------------------------------------------------------------------------------------
