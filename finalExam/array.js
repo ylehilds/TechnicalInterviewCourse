@@ -9,7 +9,7 @@ function commonality(arr1, arr2, arr3) {
   let dictionary = {}
   let helper = []
   for (let element of arr1) {
-    dictionary[element] ? dictionary[element] =1 : dictionary[element] = 1
+    dictionary[element] ? dictionary[element] = 1 : dictionary[element] = 1
   }
   for (let element of arr2) {
     if(dictionary[element]) {
