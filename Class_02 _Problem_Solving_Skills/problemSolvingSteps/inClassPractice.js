@@ -8,6 +8,7 @@ function charCount(str) {
 
     // loop through string
     for (let i = 0; i < lowerStr.length; i++) {
+        let char = lowerStr[i]
         // check alphanumeric
         if (/[a-z0-9]/.test(char)) {
             result[char] ? result[char] += 1 : result[char] = 1
