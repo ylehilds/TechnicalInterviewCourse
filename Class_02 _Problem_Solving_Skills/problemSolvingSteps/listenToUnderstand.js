@@ -7,3 +7,16 @@
 // outputs
     // int? float? string? number?
     // if input is null/invalid, should we return undefined? null? error message?
+
+function sum(num1, num2) {
+  if (typeof num1 === 'number' && typeof num2 === 'number') {
+    return num1 + num2
+  }
+  else return 'One/Both numbers is/are not number(s)'
+}
+
+console.log(sum(1,2))
+console.log(sum('hello',2))
+console.log(sum(1,2.5))
+console.log(sum(1,[3]))
+console.log(sum(1,{id:3}))
