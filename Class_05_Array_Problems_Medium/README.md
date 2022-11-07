@@ -1,1 +1,0 @@
-# Class 5 - Array Problems Medium
