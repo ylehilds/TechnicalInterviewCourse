@@ -8,6 +8,7 @@
     // int? float? string? number?
     // if input is null/invalid, should we return undefined? null? error message?
 
+// sum 2 numbers and return sum
 function sum(num1, num2) {
   if (typeof num1 === 'number' && typeof num2 === 'number') {
     return num1 + num2
