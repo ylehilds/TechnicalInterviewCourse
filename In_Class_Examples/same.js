@@ -56,4 +56,5 @@ function same(arr1,arr2) {
   return true
 }
 
-console.log(same([1,2,3,4,5], [1,25,16,4,9]))
+// console.log(same([1,2,3,4,5], [1,25,16,4,9]))
+console.log(same([1,2,3,2], [9,1,4,4]))
