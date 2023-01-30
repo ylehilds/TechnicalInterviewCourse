@@ -31,8 +31,8 @@ function sameNaive(arr1, arr2) {
   return returnValue
 }
 
-// optimized solution:
-function sameOptimized(arr1, arr2) {
+// optimized solution using frquency counter:
+function sameOptimizedFrequencyCounter(arr1, arr2) {
   let frequencyCounter1 = {}
   let frequencyCounter2 = {}
   for (let i=0; i< arr1.length;i++) frequencyCounter1[arr1[i]] ? frequencyCounter1[arr1[i]] +=1 : frequencyCounter1[arr1[i]] = 1
@@ -45,4 +45,15 @@ function sameOptimized(arr1, arr2) {
   return true
 }
 
-console.log(sameOptimized([1,2,3,4,5], [1,25,16,4,9]))
+// solution from class
+function same(arr1,arr2) {
+  if (arr1.length !== arr2.length) return false
+  for (let i=0; i< arr1.length;i++) {
+    let correctIndex = arr2.indexOf(arr1[i] ** 2)
+    if (correctIndex === -1) return false
+    arr2.splice(correctIndex,1)
+  }
+  return true
+}
+
+console.log(same([1,2,3,4,5], [1,25,16,4,9]))
